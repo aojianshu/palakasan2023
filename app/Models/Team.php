@@ -15,4 +15,9 @@ class Team extends Model
     {
         return $this->color . ' ' . $this->name;
     }
+
+    public function scores()
+    {
+        return $this->hasOne(Score::class);
+    }
 }
